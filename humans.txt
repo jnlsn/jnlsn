@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: Jay Nielsen
+Site: www.jayarnielsen.com
+Twitter: @jayarnielsen
+Location: Denver, Colorado, USA
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3
+Components: foundation, modernizr
+Software: atom.io, Git, gimp
+
