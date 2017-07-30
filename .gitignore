@@ -1,1 +1,9 @@
+_site
 .sass-cache
+.asset-cache
+.jekyll-metadata
+.DS_Store
+
+_assets/bower_components
+_assets/node_modules
+_assets/npm-debug.log
