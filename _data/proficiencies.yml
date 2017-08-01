@@ -6,6 +6,7 @@
     - MySQL
     - HTML5
     - CSS3
+    - SASS
     - JavaScript
 
 - title: Web Servers
@@ -30,9 +31,10 @@
     - Wagtail
     - Jekyll
 
-- title: Digital Graphic Design
+- title: Digital Media
   skills:
     - GIMP
     - Inkscape
     - Photoshop
     - Illustrator
+    - Lightworks

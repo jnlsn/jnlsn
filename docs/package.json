@@ -1,0 +1,12 @@
+{
+  "name": "jayarnielsen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jayarnielsen/jayarnielsen.git",
+  "author": "Jay Nielsen <jayarnielsen@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "^6.4.1",
+    "motion-ui": "^1.2.3"
+  }
+}

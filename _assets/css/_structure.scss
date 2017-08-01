@@ -83,5 +83,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-content {
-  background: $white;
+  background: url(asset_path('paper.jpg')) center center;
+  background-size: cover;
 }

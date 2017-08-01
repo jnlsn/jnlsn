@@ -35,6 +35,12 @@ destination: docs
 assets:
   sources:
     - _assets/pdf
+    - node_modules/foundation-sites/scss
+    - node_modules/motion-ui/src
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE > 9"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
