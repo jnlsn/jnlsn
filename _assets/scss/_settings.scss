@@ -74,9 +74,10 @@ $foundation-palette: (
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
+  info: lighten(#e6e6e6, 2%),
 );
 $lighter-gray: lighten(#e6e6e6, 8%);
-$light-gray: #e6e6e6;
+$light-gray: lighten(#e6e6e6, 2%);
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: lighten(#0a0a0a, 2%);
@@ -136,7 +137,7 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-margin-bottom: 0.75rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
@@ -172,8 +173,8 @@ $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
-$hr-border: 1px solid $medium-gray;
-$hr-margin: rem-calc(20) auto;
+$hr-border: 1px solid $light-gray;
+$hr-margin: rem-calc(30) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;

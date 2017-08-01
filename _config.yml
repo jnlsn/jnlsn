@@ -19,8 +19,9 @@ description: > # this means to ignore newlines until "baseurl:"
   Web Dev
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+twitter_username: jayarnielsen
 github_username:  jayarnielsen
+linkedin_username: nielsen
 
 # Build settings
 markdown: kramdown
@@ -30,6 +31,10 @@ plugins:
   - jekyll-assets
 
 destination: docs
+
+assets:
+  sources:
+    - _assets/pdf
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

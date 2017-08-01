@@ -54,4 +54,6 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import 'global';
 @import 'structure';
+@import 'pages';

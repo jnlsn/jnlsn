@@ -1,0 +1,38 @@
+- title: Languages
+  skills:
+    - Python
+    - PHP
+    - PostgeSQL
+    - MySQL
+    - HTML5
+    - CSS3
+    - JavaScript
+
+- title: Web Servers
+  skills:
+    - Debian
+    - Ubuntu
+    - Nginx
+    - Apache
+
+- title: Frameworks
+  skills:
+    - jQuery
+    - AngularJS
+    - Foundation 6
+    - Bootstrap 4
+
+- title: Content Management Systems
+  skills:
+    - WordPress
+    - OpenCart
+    - Django
+    - Wagtail
+    - Jekyll
+
+- title: Digital Graphic Design
+  skills:
+    - GIMP
+    - Inkscape
+    - Photoshop
+    - Illustrator
