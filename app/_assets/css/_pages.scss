@@ -1,10 +1,19 @@
 .home-splash {
   min-height: 100vh;
-  background: linear-gradient(to bottom, lighten($secondary-color, 30%) 0%, lighten($secondary-color, 50%) 100%);
+  background: rgba($black, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.ytplayer-container {
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .main {
   padding: 3rem;
+  background: url(asset_path('paper.jpg')) center center;
 }
 
 .page-title {

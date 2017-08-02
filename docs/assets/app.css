@@ -6198,6 +6198,11 @@ ul {
   font-weight: 400;
   letter-spacing: 0.03125rem; }
 
+.light {
+  color: #fefefe; }
+  .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    color: inherit; }
+
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.03125rem; }
 
@@ -6263,17 +6268,20 @@ h1, h2, h3, h4, h5, h6 {
       .sidebar .social a i {
         vertical-align: middle; }
 
-.main-content {
-  background: url("/assets/paper.jpg") center center;
-  background-size: cover; }
-
 .home-splash {
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b3e5f1), to(white));
-  background: linear-gradient(to bottom, #b3e5f1 0%, white 100%); }
+  background: rgba(15, 15, 15, 0.5);
+  position: relative;
+  overflow: hidden; }
+
+.ytplayer-container {
+  position: absolute;
+  top: 0;
+  z-index: -1; }
 
 .main {
-  padding: 3rem; }
+  padding: 3rem;
+  background: url("/assets/paper.jpg") center center; }
 
 .page-title {
   background: #31B8DA;
