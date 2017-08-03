@@ -6270,14 +6270,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-splash {
   min-height: 100vh;
-  background: rgba(15, 15, 15, 0.5);
-  position: relative;
-  overflow: hidden; }
-
-.ytplayer-container {
-  position: absolute;
-  top: 0;
-  z-index: -1; }
+  background: url("/assets/home-bg.jpg") center center;
+  background-size: cover;
+  position: relative; }
+  .home-splash > * {
+    z-index: 1; }
+  .home-splash::before {
+    content: '';
+    background: rgba(21, 99, 118, 0.85);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
 
 .main {
   padding: 3rem;
