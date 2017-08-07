@@ -18,23 +18,33 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [{
-            loader: "css-loader"
-          }, {
-            loader: "resolve-url-loader"
-          }, {
-            loader: "sass-loader"
-          }],
+          use: [
+            "css-loader",
+            "resolve-url-loader",
+            "sass-loader",
+          ],
         }),
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
         include: path.resolve(__dirname, './src/_assets'),
-        loader: 'url-loader',
-        options: {
-          limit: 4096,
-          name: '[path][name].[ext]',
-        }
+        loaders: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 4096,
+              name: '[path][name].[ext]',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              optipng: {
+                optimizationLevel: 5,
+              },
+            },
+          },
+        ],
       }, // inline base64 URLs for <=30k images, direct URLs for the rest
     ],
   },
