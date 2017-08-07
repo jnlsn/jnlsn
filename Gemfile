@@ -14,15 +14,9 @@ gem "jekyll", "3.5.1"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
-# jekyll-assets dependencies
-gem "autoprefixer-rails"
-gem "sprockets-es6"
-gem "mini_magick"
-
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
-   gem "jekyll-assets"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

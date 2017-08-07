@@ -24,33 +24,20 @@ github_username:  jayarnielsen
 linkedin_username: nielsen
 
 # Build settings
+source : src
+destination: dist
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-assets
-source : app
-destination: docs
-assets:
-  sources:
-    - _assets/pdf
-    - node_modules/foundation-sites/scss
-    - node_modules/motion-ui/src
-    - node_modules
-  autoprefixer:
-    browsers:
-      - "last 2 versions"
-      - "IE > 9"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - yarn.lock
-  - package.json
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
