@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   context: path.resolve(__dirname, './src/_assets'),
@@ -36,14 +37,6 @@ module.exports = {
               name: '[path][name].[ext]',
             },
           },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              optipng: {
-                optimizationLevel: 5,
-              },
-            },
-          },
         ],
       }, // inline base64 URLs for <=30k images, direct URLs for the rest
     ],
@@ -53,14 +46,22 @@ module.exports = {
       filename: '[name].css',
       allChunks: true,
     }),
-    new CopyWebpackPlugin([{
-      from: 'img/**/*',
-      to: '[path][name].[ext]',
-    },{
-      from: 'pdf/**/*',
-      to: '[path][name].[ext]',
-    }],{
+    new CopyWebpackPlugin(
+    [
+      {
+        from: 'img/**/*',
+        to: '[path][name].[ext]',
+      },
+      {
+        from: 'pdf/**/*',
+        to: '[path][name].[ext]',
+      }
+    ],
+    {
       copyUnmodified: true,
+    }),
+    new ImageminPlugin({ 
+      test: /\.(jpe?g|png|gif|svg)$/i 
     }),
   ],
 };
