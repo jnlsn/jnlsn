@@ -2,7 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = {
   context: path.resolve(__dirname, './src/_assets'),
@@ -47,8 +48,7 @@ module.exports = {
       filename: '[name].css',
       allChunks: true,
     }),
-    new CopyWebpackPlugin(
-    [
+    new CopyWebpackPlugin([
       {
         from: 'img/**/*',
         to: '[path][name].[ext]',
@@ -57,12 +57,13 @@ module.exports = {
         from: 'pdf/**/*',
         to: '[path][name].[ext]',
       }
-    ],
-    {
-      copyUnmodified: true,
-    }),
+    ]),
     new ImageminPlugin({ 
-      test: /\.(jpe?g|png|gif|svg)$/i 
+      optipng: { optimizationLevel: 7 },
+      gifsicle: { optimizationLevel: 3 },
+      pngquant: { quality: '65-90', speed: 4 },
+      svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false },
+      plugins: [imageminMozjpeg({ quality: 75 })],
     }),
   ],
 };
