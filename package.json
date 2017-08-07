@@ -7,7 +7,8 @@
   "license": "MIT",
   "dependencies": {
     "foundation-sites": "^6.4.1",
-    "motion-ui": "^1.2.3"
+    "motion-ui": "^1.2.3",
+    "slick-carousel": "^1.7.1"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",

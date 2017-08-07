@@ -1,12 +1,48 @@
 ---
 layout: default
+
+slides:
+  - title: Web Development
+    text: As co-creator of Dototot and co-producer of The Hello World Program, I educate and empower people to make their own media and engage critically with contemporary advances in technology. I graduated from Utah Valley University in 2009 with a BS in Digital Media and have extensive web development and video production experience reaching back to 2008. As a proponent of open-source technology, most of my creative works are produced on Linux-based machines using free and open-source software.
+    icon: fa-laptop
+    image: assets/img/web-dev.jpg
+  - title: Video Production
+    text: Lipsum tipsum!
+    icon: fa-video-camera
+    image: assets/img/video-production.jpg
+  - title: Education
+    text: Lipsum tipsum!
+    icon: fa-book
+    image: assets/img/education.jpg
 ---
-<div class="grid-x align-center-middle text-center home-splash light">
-  <div class="cell small-8 large-6">
-    <p>
-      As co-creator of Dototot and co-producer of The Hello World Program, I educate and empower people to make their own media and engage critically with contemporary advances in technology. I graduated from Utah Valley University in 2009 with a BS in Digital Media and have extensive web development and video production experience reaching back to 2008. As a proponent of open-source technology, most of my creative works are produced on Linux-based machines using free and open-source software.
-    </p>
-    <a class="button primary" href="https://dototot.com">Cool!</a>
-    <a class="button hollow primary" href="https://thehelloworldprogram.com">Wow!</a>
+<div class="grid-x align-center-middle hero light">
+  <div class="hero-bg">
+    {% for slide in page.slides %}
+      <div style="background-image: url({{ slide.image | relative_url }});"></div>
+    {% endfor %}
+  </div>
+  <div class="hero-main cell small-10 medium-8 large-6">
+    <div class="grid-x grid-padding-x grid-padding-y hero-tabs-nav">
+      {% for slide in page.slides %}
+        <div
+          class="cell tab shrink{% if forloop.first %} active{% endif %}"
+          data-goto-slide="{{ forloop.index0 }}">
+          <i class="fa fa-fw {{ slide.icon }}"></i>
+        </div>
+      {% endfor %}
+      <div class="cell auto"><!-- Spacer --></div>
+    </div>
+    <div class="hero-tabs-content">
+      {% for slide in page.slides %}
+        <div>
+          <h1>{{ slide.title }}</h1>
+          <p>
+            {{ slide.text }}
+          </p>
+          <a class="button hollow light" href="{% link resume.html %}">Learn More</a>
+          <a class="button hollow light" href="https://thehelloworldprogram.com">Get In Touch</a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

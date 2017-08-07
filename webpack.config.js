@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -40,7 +42,17 @@ module.exports = {
             },
           },
         ],
-      }, // inline base64 URLs for <=30k images, direct URLs for the rest
+      },
+      {
+        test: /\.(ttf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
+        include: /node_modules|bower_components/,
+        loader: 'url-loader',
+        options: {
+          limit: 4096,
+          outputPath: 'vendor/',
+          name: '[name].[ext]',
+        },
+      },
     ],
   },
   plugins: [
@@ -58,6 +70,13 @@ module.exports = {
         to: '[path][name].[ext]',
       }
     ]),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Tether: 'tether',
+      'window.Tether': 'tether',
+    }),
     new ImageminPlugin({ 
       optipng: { optimizationLevel: 7 },
       gifsicle: { optimizationLevel: 3 },
