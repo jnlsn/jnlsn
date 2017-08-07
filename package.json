@@ -18,6 +18,8 @@
     "git-directory-deploy": "^1.5.1",
     "imagemin-webpack-plugin": "^1.5.0-beta.0",
     "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "postcss-safe-parser": "^3.0.1",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
