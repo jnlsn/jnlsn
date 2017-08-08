@@ -29,55 +29,81 @@ h1, h2, h3, h4, h5, h6 {
       letter-spacing: rem-calc(1.75);
     }
   }
+}
 
-  .primary-nav {
-    border-top: rem-calc(1) solid $light-gray;
+.primary-nav {
+  border-top: rem-calc(1) solid $light-gray;
+  text-align: center;
 
-    a {
-      font-family: $header-font-family;
-      font-weight: $header-font-weight;
-      color: $body-font-color;
-      border-bottom: rem-calc(1) solid $light-gray;
+  a {
+    font-family: $header-font-family;
+    font-weight: $header-font-weight;
+    color: $body-font-color;
+    border-bottom: rem-calc(1) solid $light-gray;
+    width: 100%;
+    padding: 1rem 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      height: rem-calc(1);
+      background: $primary-color;
+      position: absolute;
+      bottom: rem-calc(-1);
+      left: 0;
+      width: 0;
+      transition: all linear 0.2s;
+    }
+
+    &:hover::after {
       width: 100%;
-      text-align: center;
-      padding: 1rem 0;
-      position: relative;
-
-      &::after {
-        content: '';
-        height: rem-calc(1);
-        background: $primary-color;
-        position: absolute;
-        bottom: rem-calc(-1);
-        left: 0;
-        width: 0;
-        transition: all linear 0.2s;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
     }
   }
+}
 
-  .social {
+.social {
+  text-align: center;
+  padding: 2rem 0;
+
+  a {
+    color: $dark-gray;
+    display: inline-block;
+    width: 1.75em;
+    height: 1.75em;
+    line-height: 1.75em;
     text-align: center;
-    padding: 2rem 0;
+    background: $light-gray;
+    font-size: rem-calc(18);
+    margin: 0.15rem;
+
+    i {
+      vertical-align: middle;
+    }
+  }
+}
+
+.mobile-nav {
+  .top-bar {
+    box-shadow: 0 2px 15px rgba($black, 0.05);
+  }
+
+  h5 {
+    margin: 0;
 
     a {
-      color: $dark-gray;
-      display: inline-block;
-      width: 1.75em;
-      height: 1.75em;
-      line-height: 1.75em;
-      text-align: center;
-      background: $light-gray;
-      font-size: rem-calc(18);
-      margin: 0.15rem;
+      color: inherit;
+    }
 
-      i {
-        vertical-align: middle;
-      }
+    .face {
+      max-height: 1.5em;
+      border-radius: 50%;
+      vertical-align: middle;
+      position: relative;
+      top: rem-calc(-1);
     }
   }
+}
+
+.off-canvas {
+  padding-top: 3rem;
 }
