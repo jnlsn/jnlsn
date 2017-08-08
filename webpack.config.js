@@ -1,38 +1,51 @@
 'use strict';
 
-const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
-module.exports = {
-  context: path.resolve(__dirname, './src/_assets'),
+const config = require('./config');
+
+let webpackConfig = {
+  context: config.paths.entry,
   entry: {
     app: ['./js/app.js', './scss/app.scss'],
   },
   output: {
-    path: path.resolve(__dirname, './src/assets'),
+    path: config.paths.output,
     filename: '[name].js',
   },
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
+        use: [
+          { loader: 'buble-loader', options: { objectAssign: 'Object.assign' } },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            "css-loader",
-            "postcss-loader",
-            "resolve-url-loader",
-            "sass-loader",
+            { loader: 'css-loader', options: { sourceMap: config.enabled.sourceMaps } },
+            {
+              loader: 'postcss-loader', options: {
+                config: { path: __dirname, ctx: config },
+                sourceMap: config.enabled.sourceMaps,
+              },
+            },
+            { loader: 'resolve-url-loader', options: { sourceMap: config.enabled.sourceMaps } },
+            { loader: 'sass-loader', options: { sourceMap: config.enabled.sourceMaps } },
           ],
         }),
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
-        include: path.resolve(__dirname, './src/_assets'),
+        test: /\.(ttf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
+        include: config.paths.entry,
         loaders: [
           {
             loader: 'url-loader',
@@ -77,12 +90,19 @@ module.exports = {
       Tether: 'tether',
       'window.Tether': 'tether',
     }),
-    new ImageminPlugin({ 
+    new ImageminPlugin({
       optipng: { optimizationLevel: 7 },
       gifsicle: { optimizationLevel: 3 },
       pngquant: { quality: '65-90', speed: 4 },
       svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false },
       plugins: [imageminMozjpeg({ quality: 75 })],
+      disable: (config.enabled.watcher),
     }),
   ],
 };
+
+if (config.env.production) {
+  webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin());
+}
+
+module.exports = webpackConfig;

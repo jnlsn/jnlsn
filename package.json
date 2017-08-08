@@ -11,6 +11,7 @@
     "slick-carousel": "^1.7.1"
   },
   "devDependencies": {
+    "buble-loader": "^0.4.1",
     "concurrently": "^3.5.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
@@ -26,12 +27,13 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "yargs": "^8.0.2"
   },
   "scripts": {
     "serve": "bundle exec jekyll serve",
     "start": "concurrently --kill-others 'webpack --watch --config webpack.config.js' 'bundle exec jekyll serve'",
-    "build": "webpack --progress --config webpack.config.js && bundle exec jekyll build",
-    "deploy": "git-directory-deploy --directory dist --branch gh-pages"
+    "build": "webpack --progress -p --config webpack.config.js && JEKYLL_ENV=production bundle exec jekyll build",
+    "deploy": "yarn build && git-directory-deploy --directory dist --branch gh-pages"
   }
 }
