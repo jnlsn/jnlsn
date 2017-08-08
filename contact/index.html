@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Full Stack Web Dev">
-    <title>Jay Nielsen</title>
-    <link rel="canonical" href="/contact/">
+    <title>Contact</title>
+    <link rel="canonical" href="http://localhost:4000/contact/">
     <link rel="alternate" type="application/rss+xml" title="Jay Nielsen" href="/feed.xml">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,300i,500" rel="stylesheet">
@@ -17,14 +17,14 @@
     <div class="grid-y medium-grid-frame">
       <div class="cell medium-auto medium-cell-block-container">
         <div class="grid-x">
-          <div class="cell auto medium-cell-block-y sidebar">
+          <div class="cell auto medium-cell-block-y sidebar show-for-large">
             <div class="site-title">
               <a href="/">
                 <img src="/assets/img/jay.jpg" class="face" />
               </a>
-              <h3>
+              <h2>
                 Jay Nielsen
-              </h3>
+              </h2>
               <p>
                 <span>Full Stack Web Dev</span>
               </p>
@@ -56,12 +56,48 @@
 
           </div>
           <div class="cell medium-auto medium-cell-block-y">
-            
+            <section class="main">
+  <div class="grid-x grid-margin-x">
+    <div class="cell">
+      <h1 class="page-title">Contact</h1>
+    </div>
+  </div>
+  <div class="grid-x">
+  <div class="cell xxlarge-8">
+    <p>
+      Lets work together! Drop me a line and tell me about yourself.
+    </p>
+    <form action="https://getsimpleform.com/messages?form_api_token=8d0cdf97b00bcb55590002417277da1d" method="post">
+      <input type='hidden' name='redirect_to' value='http://localhost:4000/thank-you' />
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-auto">
+          <label>
+            Name:
+            <input type="text" name="name" required />
+          </label>
+        </div>
+        <div class="cell medium-auto">
+          <label>
+            Email:
+            <input type="email" name="email" required />
+          </label>
+        </div>
+      </div>
+      <label>
+        Message:
+        <textarea name="message" rows="10" required></textarea>
+      </label>
+      <button type="submit" class="button primary">Send</button>
+    </form>
+  </div>
+</div>
+
+</section>
+
           </div>
         </div>
       </div>
     </div>
-
 
     <script src="/assets/app.js"></script>
   </body>
