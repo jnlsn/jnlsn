@@ -14,49 +14,104 @@
   </head>
   <body>
 
-    <div class="grid-y medium-grid-frame">
-      <div class="cell medium-auto medium-cell-block-container">
-        <div class="grid-x">
-          <div class="cell auto medium-cell-block-y sidebar show-for-large">
-            <div class="site-title">
-              <a href="/">
-                <img src="/assets/img/jay.jpg" class="face" />
-              </a>
-              <h2>
-                Jay Nielsen
-              </h2>
-              <p>
-                <span>Full Stack Web Dev</span>
-              </p>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas position-right" data-off-canvas data-transition="overlap" id="off-canvas">
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <ul class="menu vertical primary-nav">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li>
+    <a href="/about/">About</a>
+  </li>
+  <li>
+    <a href="/resume/">Resume</a>
+  </li>
+  <li>
+    <a href="/contact/">Contact</a>
+  </li>
+</ul>
+
+<div class="social">
+  <a target="_blank" href="https://github.com/jayarnielsen">
+    <i class="fa fa-github"></i>
+  </a>
+  <a target="_blank" href="https://www.linkedin.com/in/nielsen">
+    <i class="fa fa-linkedin"></i>
+  </a>
+</div>
+
+      </div>
+      <div class="off-canvas-content" data-off-canvas-content>
+        <nav class="mobile-nav hide-for-large" data-sticky-container>
+          <div class="sticky" data-sticky
+          data-sticky-on="small"
+          data-margin-top="0"
+          data-top-anchor="1">
+            <div class="top-bar">
+              <div class="top-bar-left">
+                <h5>
+                  <a href="/">
+                    <img src="/assets/img/jay.jpg" class="face" />
+                    Jay Nielsen
+                  </a>
+                </h5>
+              </div>
+              <div class="top-bar-right">
+                <div class="off-canvas-trigger">
+                  <button class="menu-icon" type="button" data-open="off-canvas"></button>
+                </div>
+              </div>
             </div>
-
-            <ul class="menu vertical primary-nav">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about/">About</a>
-              </li>
-              <li>
-                <a href="/resume/">Resume</a>
-              </li>
-              <li>
-                <a href="/contact/">Contact</a>
-              </li>
-            </ul>
-
-            <div class="social">
-              <a target="_blank" href="https://github.com/jayarnielsen">
-                <i class="fa fa-github"></i>
-              </a>
-              <a target="_blank" href="https://www.linkedin.com/in/nielsen">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </div>
-
           </div>
-          <div class="cell medium-auto medium-cell-block-y">
-            <style type="text/css" media="screen">
+        </nav>
+
+        <div class="grid-y medium-grid-frame">
+          <div class="cell medium-auto medium-cell-block-container">
+            <div class="grid-x">
+              <div class="cell auto medium-cell-block-y sidebar show-for-large">
+                <div class="site-title">
+                  <a href="/">
+                    <img src="/assets/img/jay.jpg" class="face" />
+                  </a>
+                  <h2>
+                    Jay Nielsen
+                  </h2>
+                  <p>
+                    <span>Full Stack Web Dev</span>
+                  </p>
+                </div>
+
+                <ul class="menu vertical primary-nav">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li>
+    <a href="/about/">About</a>
+  </li>
+  <li>
+    <a href="/resume/">Resume</a>
+  </li>
+  <li>
+    <a href="/contact/">Contact</a>
+  </li>
+</ul>
+
+<div class="social">
+  <a target="_blank" href="https://github.com/jayarnielsen">
+    <i class="fa fa-github"></i>
+  </a>
+  <a target="_blank" href="https://www.linkedin.com/in/nielsen">
+    <i class="fa fa-linkedin"></i>
+  </a>
+</div>
+
+
+              </div>
+              <div class="cell medium-auto medium-cell-block-y">
+                <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -77,6 +132,8 @@
   <p>The requested page could not be found.</p>
 </div>
 
+              </div>
+            </div>
           </div>
         </div>
       </div>
