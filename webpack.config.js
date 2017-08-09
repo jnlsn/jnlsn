@@ -9,13 +9,11 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const config = require('./config');
 
 let webpackConfig = {
-  context: config.paths.entry,
-  entry: {
-    app: ['./js/app.js', './scss/app.scss'],
-  },
+  context: config.paths.src,
+  entry: config.entry,
   output: {
-    path: config.paths.output,
-    filename: '[name].js',
+    path: config.paths.dist,
+    filename: 'js/[name].js',
   },
   module: {
     rules: [
@@ -45,7 +43,7 @@ let webpackConfig = {
       },
       {
         test: /\.(ttf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
-        include: config.paths.entry,
+        include: config.paths.src,
         loaders: [
           {
             loader: 'url-loader',
@@ -70,19 +68,10 @@ let webpackConfig = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: '[name].css',
+      filename: 'css/[name].css',
       allChunks: true,
     }),
-    new CopyWebpackPlugin([
-      {
-        from: 'img/**/*',
-        to: '[path][name].[ext]',
-      },
-      {
-        from: 'pdf/**/*',
-        to: '[path][name].[ext]',
-      }
-    ]),
+    new CopyWebpackPlugin(config.copy),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

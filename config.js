@@ -5,9 +5,22 @@ const isProduction = !!((argv.env && argv.env.production) || argv.p);
 
 module.exports = {
   paths: {
-    entry: path.resolve( __dirname, './src/_assets' ),
-    output: path.resolve( __dirname, './src/assets' ),
+    src: path.resolve( __dirname, './src/_assets' ),
+    dist: path.resolve( __dirname, './src/assets' ),
   },
+  entry: {
+    app: ['./js/app.js', './css/app.scss'],
+  },
+  copy: [
+    {
+      from: 'img/**/*',
+      to: '[path][name].[ext]',
+    },
+    {
+      from: 'pdf/**/*',
+      to: '[path][name].[ext]',
+    }
+  ],
   enabled: {
     sourceMaps: !isProduction,
     optimize: isProduction,
