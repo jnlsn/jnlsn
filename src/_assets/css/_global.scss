@@ -7,6 +7,14 @@ ul {
   font-family: $header-font-family;
   font-weight: $header-font-weight;
   letter-spacing: rem-calc(0.5);
+
+  &.hollow.light {
+    &:hover,
+    &:focus {
+      background: $white;
+      color: $secondary-color;
+    }
+  }
 }
 
 .light {

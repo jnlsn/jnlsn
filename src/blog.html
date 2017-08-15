@@ -1,0 +1,19 @@
+---
+layout: page
+permalink: /blog/
+title: Blog
+---
+<div class="grid-x grid-margin-x">
+  <div class="cell xlarge-8">
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="cell xlarge-4">
+
+  </div>
+</div>

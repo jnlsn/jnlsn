@@ -1,6 +1,8 @@
 'use strict';
 
 const webpack = require('webpack');
+const merge = require('webpack-merge');
+const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
@@ -11,12 +13,34 @@ const config = require('./config');
 let webpackConfig = {
   context: config.paths.src,
   entry: config.entry,
+  devtool: (config.enabled.sourceMaps ? '#source-map' : undefined),
   output: {
     path: config.paths.dist,
-    filename: 'js/[name].js',
+    publicPath: config.publicPath,
+    filename: '[name].js',
+  },
+  stats: {
+    hash: false,
+    version: false,
+    timings: false,
+    children: false,
+    errors: false,
+    errorDetails: false,
+    warnings: false,
+    chunks: false,
+    modules: false,
+    reasons: false,
+    source: false,
+    publicPath: false,
   },
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.(js|s?[ca]ss)$/,
+        include: config.paths.src,
+        loader: 'import-glob-loader',
+      },
       {
         test: /\.js$/,
         exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
@@ -26,6 +50,7 @@ let webpackConfig = {
       },
       {
         test: /\.scss$/,
+        include: config.paths.src,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -66,10 +91,23 @@ let webpackConfig = {
       },
     ],
   },
+  resolve: {
+    modules: [
+      config.paths.src,
+      'node_modules',
+      'bower_components',
+    ],
+    enforceExtension: false,
+  },
   plugins: [
+    new CleanPlugin([config.paths.dist], {
+      root: config.paths.root,
+      verbose: false,
+    }),
     new ExtractTextPlugin({
-      filename: 'css/[name].css',
+      filename: '[name].css',
       allChunks: true,
+      disable: (config.enabled.watcher),
     }),
     new CopyWebpackPlugin(config.copy),
     new webpack.ProvidePlugin({
@@ -78,6 +116,24 @@ let webpackConfig = {
       'window.jQuery': 'jquery',
       Tether: 'tether',
       'window.Tether': 'tether',
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: config.enabled.optimize,
+      debug: config.enabled.watcher,
+      stats: { colors: true },
+    }),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.s?css$/,
+      options: {
+        output: { path: config.paths.dist },
+        context: config.paths.src,
+      },
+    }),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.js$/,
+      options: {
+        eslint: { failOnWarning: false, failOnError: true },
+      },
     }),
     new ImageminPlugin({
       optipng: { optimizationLevel: 7 },
@@ -92,6 +148,11 @@ let webpackConfig = {
 
 if (config.env.production) {
   webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin());
+}
+
+if (config.enabled.watcher) {
+  webpackConfig.entry = require('./util/addHotMiddleware')(webpackConfig.entry);
+  webpackConfig = merge(webpackConfig, require('./webpack.config.watch'));
 }
 
 module.exports = webpackConfig;

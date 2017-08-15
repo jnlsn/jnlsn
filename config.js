@@ -5,6 +5,7 @@ const isProduction = !!((argv.env && argv.env.production) || argv.p);
 
 module.exports = {
   paths: {
+    root: process.cwd(),
     src: path.resolve( __dirname, './src/_assets' ),
     dist: path.resolve( __dirname, './src/assets' ),
   },
@@ -27,6 +28,13 @@ module.exports = {
     watcher: !!argv.watch,
   },
   env: Object.assign({ production: isProduction, development: !isProduction }, argv.env),
+  devUrl: 'http://127.0.0.1:4000/',
+  proxyUrl: 'http://localhost:3000',
+  watch: [
+    "dist/**/*.html",
+  ],
+  open: true,
+  publicPath: '/dist/assets',
 }
 
 if (process.env.NODE_ENV === undefined) {

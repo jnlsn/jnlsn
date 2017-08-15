@@ -11,7 +11,10 @@
     "slick-carousel": "^1.7.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browsersync-webpack-plugin": "^0.6.0",
     "buble-loader": "^0.4.1",
+    "clean-webpack-plugin": "^0.1.16",
     "concurrently": "^3.5.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
@@ -20,6 +23,7 @@
     "git-directory-deploy": "^1.5.1",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-webpack-plugin": "^1.5.0-beta.0",
+    "import-glob-loader": "^1.1.0",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "postcss-safe-parser": "^3.0.1",
@@ -28,11 +32,14 @@
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.4.1",
+    "webpack-hot-middleware": "^2.18.2",
+    "webpack-merge": "^4.1.0",
     "yargs": "^8.0.2"
   },
   "scripts": {
     "serve": "bundle exec jekyll serve",
-    "start": "concurrently --kill-others 'webpack --watch --config webpack.config.js' 'bundle exec jekyll serve'",
+    "watch": "webpack --hide-modules --watch --config webpack.config.js",
+    "start": "concurrently --kill-others 'yarn serve' 'yarn watch'",
     "build": "webpack --progress -p --config webpack.config.js && JEKYLL_ENV=production bundle exec jekyll build",
     "deploy": "yarn build && git-directory-deploy --directory dist --branch gh-pages"
   }
