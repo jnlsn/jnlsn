@@ -34,7 +34,7 @@ module.exports = {
     "dist/**/*.html",
   ],
   open: true,
-  publicPath: '/dist/assets',
+  publicPath: '/assets',
 }
 
 if (process.env.NODE_ENV === undefined) {

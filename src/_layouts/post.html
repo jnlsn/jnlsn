@@ -1,11 +1,29 @@
 ---
 layout: default
 ---
-<section class="main">
-  <div class="grid-x grid-margin-x">
-    <div class="cell">
-      <h1 class="page-title">{{ page.title }}</h1>
+<header class="post-header light" style="background-image: url({{ page.featured_image | relative_url }});">
+  <div class="grid-x grid-margin-x align-middle">
+    <div class="cell xlarge-5">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="meta">
+        <span class="date">
+          <i class="fa fa-calendar"></i>
+          {{ page.date | date: "%B %-d, %Y" }}
+        </span>
+        <span class="categories">
+          <i class="fa fa-tags"></i>
+          {% for cat in page.categories %}
+            {{ cat }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        </span>
+      </p>
     </div>
   </div>
-  {{ content }}
+</header>
+<section class="main">
+  <div class="grid-x">
+    <div class="cell xlarge-8">
+      {{ content }}
+    </div>
+  </div>
 </section>

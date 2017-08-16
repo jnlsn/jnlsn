@@ -1,0 +1,36 @@
+.post-header {
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  position: relative;
+
+  .meta {
+    span {
+      margin-right: 1rem;
+    }
+
+    .categories {
+      text-transform: capitalize;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(darken($secondary-color, 25%), 0.9);
+  }
+
+  > * {
+    z-index: 1;
+    position: relative;
+  }
+
+  .grid-x {
+    min-height: 25vh;
+  }
+}

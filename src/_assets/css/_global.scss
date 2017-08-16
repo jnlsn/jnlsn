@@ -1,3 +1,11 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: rem-calc(0.5);
+}
 
 ul {
   list-style: square;
@@ -13,6 +21,7 @@ ul {
     &:focus {
       background: $white;
       color: $secondary-color;
+      border-color: $white;
     }
   }
 }
@@ -20,7 +29,12 @@ ul {
 .light {
   color: $white;
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: inherit;
   }
 }
