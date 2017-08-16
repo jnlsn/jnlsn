@@ -11,8 +11,8 @@
     "start": "concurrently --kill-others --names 'JKYL,WBPK' -c 'red,blue' 'yarn serve' 'yarn watch'",
     "build": "webpack --progress -p --config webpack.config.js && JEKYLL_ENV=production bundle exec jekyll build",
     "deploy": "yarn build && git-directory-deploy --directory dist --branch gh-pages",
-    "lint:scripts": "eslint src/_assets/js",
-    "lint:styles": "stylelint src/_assets/css/**/*.{css,sass,scss,sss,less}"
+    "lint:js": "eslint src/_assets/js",
+    "lint:css": "stylelint src/_assets/css/**/*.{css,sass,scss,sss,less}"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
