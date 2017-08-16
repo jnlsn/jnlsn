@@ -18,7 +18,6 @@
     "autoprefixer": "^7.1.2",
     "browser-sync": "^2.18.13",
     "browsersync-webpack-plugin": "^0.6.0",
-    "bs-html-injector": "^3.0.3",
     "buble-loader": "^0.4.1",
     "cache-loader": "^1.0.3",
     "clean-webpack-plugin": "^0.1.16",
