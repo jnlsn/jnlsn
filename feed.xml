@@ -1,2 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://jayarnielsen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://jayarnielsen.com/" rel="alternate" type="text/html" /><updated>2017-08-16T16:17:23-06:00</updated><id>http://jayarnielsen.com/</id><title type="html">Jay Nielsen</title><subtitle>Full Stack Web Dev
-</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://jayarnielsen.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://jayarnielsen.com/" rel="alternate" type="text/html" /><updated>2017-08-17T11:40:03-06:00</updated><id>http://jayarnielsen.com/</id><title type="html">Jay Nielsen</title><subtitle>Full Stack Web Dev
+</subtitle><entry><title type="html">Amethyst is a Jekyll Starter Theme Inspired by Sage 9</title><link href="http://jayarnielsen.com/journal/introducing-amethyst" rel="alternate" type="text/html" title="Amethyst is a Jekyll Starter Theme Inspired by Sage 9" /><published>2017-08-17T00:00:00-06:00</published><updated>2017-08-17T00:00:00-06:00</updated><id>http://jayarnielsen.com/journal/introducing-amethyst</id><content type="html" xml:base="http://jayarnielsen.com/journal/introducing-amethyst">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a brilliant, lightweight alternative to heavyweight content management systems like &lt;a href=&quot;https://wordpress.org/&quot;&gt;WordPress&lt;/a&gt;. Its developer oriented approach is refreshing in a sea of dumbed-down graphical page builders. I could gush about the superiority of Jekyll all day, but it isn’t without its shortcomings. Besides a built in local server, Jekyll doesn’t offer much in the way of modern development tools. Not that it needs to have these features built in; that’s what starter themes are for! Like the magnificent WordPress theme, &lt;a href=&quot;https://roots.io/sage&quot;&gt;Sage 9&lt;/a&gt;, which offers such features as Webpack asset management, ES6 support, and Browsersync for synchronized browser testing. Oh my!&lt;/p&gt;
+
+&lt;p&gt;As I’ve become more comfortable with Sage 9, my Jekyll workflow has been left feeling antiquated and kludgy. Amethyst was born out of a desire to modernize the development process for Jekyll-based websites, and is heavily inspired by Sage 9.&lt;/p&gt;
+
+&lt;h2 id=&quot;opposite-and-complimentary&quot;&gt;Opposite and Complimentary&lt;/h2&gt;
+
+&lt;p&gt;Unlike Sage 9, which builds upon a dynamic, living foundation (WordPress), Amethyst is static. Solid like a rock (or like Jekyll). Sage and Amethyst are also, conveniently, opposite colors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2017/08/sage%20not%20amethyst.jpg&quot; alt=&quot;Sage != Amethyst&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where WordPress prides itself on simplicity for the technically challenged, Jekyll thrives as a tool for the technically abled. The platforms are yin and yang in the development toolkit, and Amethyst exists to bridge the development workflow gap between the two.&lt;/p&gt;
+
+&lt;h2 id=&quot;look-at-it-shine&quot;&gt;Look at it shine&lt;/h2&gt;
+
+&lt;p&gt;Amethyst has all kinds of bells and whistles packed in. Perhaps more importantly: it’s designed to be easy to use and modify. Out of the box, Amethyst includes…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sass-lang.com/&quot;&gt;SCSS&lt;/a&gt; for stylesheets&lt;/li&gt;
+  &lt;li&gt;ES6 for JavaScript&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://webpack.github.io&quot;&gt;Webpack&lt;/a&gt; for compiling assets, optimizing images, and concatenating and minifying CSS and JavaScript files&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jch.penibelst.de/&quot;&gt;Jekyll Compress HTML&lt;/a&gt; for HTML minification&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.browsersync.io/&quot;&gt;Browsersync&lt;/a&gt; for synchronized browser testing&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://foundation.zurb.com/sites&quot;&gt;Foundation 6&lt;/a&gt; CSS framework (with support for Bootstrap if that’s your thing)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Plus all the benefits of Jekyll including markdown support, liquid templates, and blog-aware features. &lt;a href=&quot;http://jayarnielsen.com&quot;&gt;This very site&lt;/a&gt; was built on Amethyst! You can even &lt;a href=&quot;https://github.com/jayarnielsen/jayarnielsen&quot;&gt;view the source code&lt;/a&gt; on Gitub.&lt;/p&gt;
+
+&lt;p&gt;Because hosting is spendy and obnoxious, Amethyst is also set up to make it extra simple to deploy to Github Pages for free, no strings attached hosting.&lt;/p&gt;
+
+&lt;h2 id=&quot;k-thnx-bai&quot;&gt;K THNX BAI!&lt;/h2&gt;
+
+&lt;p&gt;Amethyst was developed by me over the course of several, moderately painful weeks. It’s primarily a labor of curiosity. This seemingly simple theme was no small feat to piece together. Which is why I’ll be soon to follow up with a comprehensive tutorial series outlining not only how to use Amethyst, but why each component exists and what its purpose is.&lt;/p&gt;
+
+&lt;div class=&quot;grid-x grid-padding-y align-center&quot;&gt;
+  &lt;div class=&quot;cell shrink&quot;&gt;
+    &lt;a class=&quot;button large&quot; href=&quot;https://github.com/jayarnielsen/amethyst&quot;&gt;Download Amethyst&lt;/a&gt;
+    &lt;a class=&quot;button large disabled&quot; href=&quot;#&quot;&gt;Learn Amethyst&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Jekyll" /><category term="WordPress" /><summary type="html">Jekyll is a brilliant, lightweight alternative to heavyweight content management systems like WordPress. Its developer oriented approach is refreshing in a sea of dumbed-down graphical page builders. I could gush about the superiority of Jekyll all day, but it isn’t without its shortcomings. Besides a built in local server, Jekyll doesn’t offer much in the way of modern development tools. Not that it needs to have these features built in; that’s what starter themes are for! Like the magnificent WordPress theme, Sage 9, which offers such features as Webpack asset management, ES6 support, and Browsersync for synchronized browser testing. Oh my!</summary></entry></feed>
