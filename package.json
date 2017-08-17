@@ -9,6 +9,7 @@
     "serve": "bundle exec jekyll serve --drafts",
     "watch": "webpack --hide-modules --watch --config webpack.config.js",
     "start": "concurrently --kill-others --names 'JKYL,WBPK' -c 'red,blue' 'yarn serve' 'yarn watch'",
+    "serve:production": "webpack --progress -p --config webpack.config.js && JEKYLL_ENV=production bundle exec jekyll serve --drafts",
     "build": "webpack --progress -p --config webpack.config.js && JEKYLL_ENV=production bundle exec jekyll build",
     "deploy": "yarn build && git-directory-deploy --directory dist --branch gh-pages",
     "lint:js": "eslint src/_assets/js",
@@ -48,7 +49,7 @@
     "yargs": "^8.0.2"
   },
   "dependencies": {
-    "foundation-sites": "^6.4.1",
+    "foundation-sites": "^6.4.2",
     "motion-ui": "^1.2.3",
     "slick-carousel": "^1.7.1"
   }

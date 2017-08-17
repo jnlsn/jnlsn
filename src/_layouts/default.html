@@ -17,7 +17,7 @@ layout: compress
       <link href="{{ 'assets/app.css' | relative_url }}" rel="stylesheet">
     {% endif %}
   </head>
-  <body>
+  <body class="{% include body-class.html %}">
 
     <div class="off-canvas-wrapper">
       <div class="off-canvas position-right" data-off-canvas data-transition="overlap" id="off-canvas">
@@ -78,6 +78,8 @@ layout: compress
       </div>
     </div>
 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5995ac5a0d1f7a88"></script>
     <script src="{{ 'assets/app.js' | relative_url }}"></script>
   </body>
 </html>

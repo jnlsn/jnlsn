@@ -1,0 +1,26 @@
+{%- capture body_class -%}
+  {%- if page.slug -%}
+    {{ page.slug }},
+  {%- else -%}
+    home,
+  {%- endif -%}
+
+  {%- if page.id -%}
+    post,
+  {%- else -%}
+    page,
+  {%- endif -%}
+
+  {%- if page.categories -%}
+    {%- for cat in page.categories -%}
+      category-{{ cat | downcase }},
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if page.tags -%}
+    {%- for tag in page.tags -%}
+      tag-{{ tag | downcase }},
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+{{- body_class | strip_newlines | split: "," | join: " " -}}

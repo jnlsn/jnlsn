@@ -1,0 +1,24 @@
+---
+layout: page
+permalink: /journal/
+title: Journal
+---
+<div class="grid-x grid-margin-x">
+  <div class="cell xlarge-8">
+    <div class="grid-x grid-margin-x grid-margin-y small-up-1 medium-up-2">
+      {% for post in site.posts %}
+        <div class="cell post-preview light" style="background-image: url({{ post.featured_image | relative_url }});">
+          <h3>{{ post.title }}</h3>
+          <div class="meta">
+            <i class="fa fa-calendar"></i>
+            {{ post.date | date: "%b %-d, %Y" }}
+          </div>
+          <a href="{{ post.url }}"></a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="cell xlarge-4">
+
+  </div>
+</div>

@@ -5,6 +5,9 @@ import 'slick-carousel';
 
 $(document).ready(function(){
   $(document).foundation();
+  // setTimeout(function(){
+  //   $(document).foundation();
+  // }, 600);
 
   // Home Page Hero Slider
   $('.hero-tabs-content').slick({

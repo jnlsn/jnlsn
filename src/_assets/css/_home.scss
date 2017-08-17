@@ -1,0 +1,102 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+
+  .hero-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    div {
+      height: 100%;
+    }
+
+    .slick-slide {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  &::before {
+    content: '';
+    background: rgba(darken($secondary-color, 25%), 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .hero-main {
+    z-index: 1;
+  }
+
+  .hero-tabs-nav {
+    margin-bottom: 1rem;
+
+    .cell {
+      border: 1px solid transparent;
+      border-radius: 2px 2px 0 0;
+      border-bottom-color: $white;
+      transition: border-color linear 0.2s;
+
+      + .cell {
+        margin-left: -1px;
+      }
+    }
+
+    .tab {
+      cursor: pointer;
+
+      i {
+        opacity: 0.75;
+        transition: opacity linear 0.2s;
+      }
+
+      &:hover i {
+        opacity: 1;
+      }
+    }
+
+    .active {
+      border: 1px solid $white;
+      border-bottom-color: transparent;
+
+      i {
+        opacity: 1;
+      }
+    }
+  }
+
+  .hero-tabs-content {
+
+    &:not(.slick-initialized) > div:not(:first-child) {
+      display: none;
+    }
+
+    .slick-slide {
+      outline: none;
+    }
+  }
+}
+
+body.home {
+  .mobile-nav {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    .top-bar {
+      background: transparent;
+      color: $white;
+      box-shadow: none;
+    }
+
+    .menu-icon {
+      @include hamburger( $white, $white);
+    }
+  }
+}

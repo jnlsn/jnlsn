@@ -99,6 +99,7 @@ $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
 $global-prototype-breakpoints: false;
+$global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 
@@ -481,6 +482,7 @@ $menu-icon-spacing: 0.25rem;
 $menu-item-background-hover: $light-gray;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
+$menu-icons-back-compat: true;
 
 // 24. Meter
 // ---------
@@ -494,9 +496,12 @@ $meter-fill-bad: $alert-color;
 
 // 25. Off-canvas
 // --------------
-
-$offcanvas-size: 300px;
-$offcanvas-vertical-size: 250px;
+$offcanvas-sizes: (
+  small: 300px,
+);
+$offcanvas-vertical-sizes: (
+  small: 250px,
+);
 $offcanvas-background: $lighter-gray;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.5);
 $offcanvas-inner-shadow-size: 20px;
@@ -861,4 +866,6 @@ $grid-margin-gutters: (
   medium: 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;
-$block-grid-max: 8;
+$grid-container-padding: $grid-padding-gutters;
+$grid-container-max: $global-width;
+$xy-block-grid-max: 8;

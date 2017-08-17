@@ -34,3 +34,53 @@
     min-height: 25vh;
   }
 }
+
+.post-widget {
+  border: rem-calc(1) solid $light-gray;
+  border-radius: rem-calc(5);
+  padding: 2rem;
+  background: $white;
+
+  + .post-widget {
+    margin-top: 2rem;
+  }
+}
+
+.post-preview {
+  position: relative;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+
+  > * {
+    z-index: 1;
+    position: relative;
+  }
+
+  a {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    background: rgba(darken($secondary-color, 25%), 0.9);
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+  }
+
+  .meta {
+    padding-top: 2rem;
+  }
+}
