@@ -12,7 +12,7 @@ As I've become more comfortable with Sage 9, my Jekyll workflow has been left fe
 
 Unlike Sage 9, which builds upon a dynamic, living foundation (WordPress), Amethyst is static. Solid like a rock (or like Jekyll). Sage and Amethyst are also, conveniently, opposite colors.
 
-pic of sage vs amethyst
+![Sage != Amethyst]({{ "assets/img/posts/2017/08/sage not amethyst.jpg" | relative_url }})
 
 Where WordPress prides itself on simplicity for the technically challenged, Jekyll thrives as a tool for the technically abled. The platforms are yin and yang in the development toolkit, and Amethyst exists to bridge the development workflow gap between the two.
 
