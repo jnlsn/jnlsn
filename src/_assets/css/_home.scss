@@ -72,7 +72,6 @@
   }
 
   .hero-tabs-content {
-
     &:not(.slick-initialized) > div:not(:first-child) {
       display: none;
     }
