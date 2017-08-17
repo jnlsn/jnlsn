@@ -5,9 +5,12 @@ import 'slick-carousel';
 
 $(document).ready(function(){
   $(document).foundation();
-  // setTimeout(function(){
-  //   $(document).foundation();
-  // }, 600);
+
+  // Disqus Comments
+  var d = document, s = d.createElement('script');
+  s.src = 'https://jayarnielsen.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
 
   // Home Page Hero Slider
   $('.hero-tabs-content').slick({
