@@ -1,9 +1,15 @@
 {%- capture body_class -%}
   {%- if page.slug -%}
     {{ page.slug }},
-  {%- else -%}
-    home,
+  {%- else if page.permalink -%}
+    {%- if page.url != "/" -%}
+      {{ page.permalink | slugify }},
+    {%- else -%}
+      home,
+    {%- endif -%}
   {%- endif -%}
+
+  layout-{{ page.layout }},
 
   {%- if page.id -%}
     post,
@@ -13,13 +19,13 @@
 
   {%- if page.categories -%}
     {%- for cat in page.categories -%}
-      category-{{ cat | downcase }},
+      category-{{ cat | downcase | slugify }},
     {%- endfor -%}
   {%- endif -%}
 
   {%- if page.tags -%}
     {%- for tag in page.tags -%}
-      tag-{{ tag | downcase }},
+      tag-{{ tag | downcase | slugify }},
     {%- endfor -%}
   {%- endif -%}
 {%- endcapture -%}
