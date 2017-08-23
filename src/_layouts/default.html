@@ -86,12 +86,14 @@ layout: compress
       ga('create', 'UA-105255174-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <script>
-      var d = document, s = d.createElement('script');
-      s.src = 'https://jayarnielsen.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    </script>
+    {% if page.layout == 'post' %}
+      <script>
+        var d = document, s = d.createElement('script');
+        s.src = 'https://jayarnielsen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    {% endif %}
     <script src="//platform-api.sharethis.com/js/sharethis.js#property=599e053905d15a0012b80958&product=inline-share-buttons"></script>
     <script src="{{ 'assets/app.js' | relative_url }}"></script>
   </body>
