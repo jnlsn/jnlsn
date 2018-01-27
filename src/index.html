@@ -18,7 +18,7 @@ slides:
 <div class="grid-x align-center-middle hero light">
   <div class="hero-bg">
     {% for slide in page.slides %}
-      <div style="background-image: url({{ slide.image | relative_url }});"></div>
+      <div class="hero-bg-img" style="background-image: url({{ slide.image | relative_url }});"></div>
     {% endfor %}
   </div>
   <div class="hero-main cell small-11 medium-8 large-7 xlarge-5">
