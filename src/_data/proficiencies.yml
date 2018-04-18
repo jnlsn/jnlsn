@@ -9,15 +9,17 @@
     - SASS
     - JavaScript
 
-- title: Web Servers
+- title: Server Administration
   skills:
     - Debian
     - Ubuntu
     - Nginx
     - Apache
+    - Ansible
 
 - title: Frameworks
   skills:
+    - React.js
     - jQuery
     - AngularJS
     - Foundation 6
