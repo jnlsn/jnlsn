@@ -1,61 +1,42 @@
 {
-  "name": "jayarnielsen",
-  "version": "1.0.0",
-  "repository": "git@github.com:jayarnielsen/jayarnielsen.git",
-  "author": "Jay Nielsen <jay@jayarnielsen.com>",
-  "homepage": "http://jayarnielsen.com",
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.0.76",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
-    "serve": "bundle exec jekyll serve --drafts --incremental",
-    "watch": "webpack --hide-modules --watch --config webpack.config.js",
-    "start": "concurrently --kill-others --names 'JKYL,WBPK' -c 'red,blue' 'yarn serve' 'yarn watch'",
-    "build": "webpack --progress -p --config webpack.config.js && JEKYLL_ENV=production bundle exec jekyll build",
-    "deploy": "yarn build && git-directory-deploy --directory dist --branch gh-pages",
-    "lint:js": "eslint src/_assets/js",
-    "lint:css": "stylelint src/_assets/css/**/*.{css,sass,scss,sss,less}",
-    "lint": "yarn lint:js && yarn lint:css"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "autoprefixer": "^8.3.0",
-    "browser-sync": "^2.23.6",
-    "browsersync-webpack-plugin": "^0.6.0",
-    "bs-html-injector": "^3.0.3",
-    "buble-loader": "^0.4.1",
-    "cache-loader": "^1.2.2",
-    "clean-webpack-plugin": "^0.1.19",
-    "concurrently": "^3.5.1",
-    "copy-webpack-plugin": "^4.5.1",
-    "css-loader": "^0.28.11",
-    "cssnano": "^v4.0.0-rc.2",
-    "eslint": "^4.19.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-import": "^2.11.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^1.1.11",
-    "friendly-errors-webpack-plugin": "^1.7.0",
-    "git-directory-deploy": "^1.5.1",
-    "imagemin-mozjpeg": "^6.0",
-    "imagemin-webpack-plugin": "^2.1.1",
-    "js-yaml": "^3.11.0",
-    "node-sass": "^4.8.3",
-    "postcss-loader": "^2.1.4",
-    "postcss-safe-parser": "^3.0.1",
-    "resolve-url-loader": "^2.3.0",
-    "sass-loader": "^6.0",
-    "style-loader": "^0.20.3",
-    "stylelint": "^9.2.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-webpack-plugin": "^0.10.4",
-    "url-loader": "^1.0.1",
-    "webpack": "^3.10.0",
-    "webpack-dev-middleware": "^3.1.2",
-    "webpack-hot-middleware": "^2.21.2",
-    "webpack-merge": "^4.1.2",
-    "yargs": "^11.0.0"
+    "prettier": "^1.15.2"
   },
-  "dependencies": {
-    "foundation-sites": "^6.4.3",
-    "motion-ui": "^1.2.3",
-    "slick-carousel": "^1.7.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
