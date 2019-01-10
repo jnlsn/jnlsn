@@ -1,0 +1,32 @@
+.about h1 {
+  line-height: 1em;
+  margin: 0;
+  margin-bottom: -0.25em;
+  color: rgba(0, 0, 0, 0.075);
+  font-size: 8rem;
+}
+
+.aboutText {
+  padding: 3rem;
+  padding-right: 10rem;
+  color: white;
+  background: #5b205e;
+  position: relative;
+  margin: 0 12%;
+  border-radius: 0.25rem;
+}
+
+.aboutText > *:last-child {
+  margin-bottom: 0;
+}
+
+.aboutImg {
+  width: 25%;
+  text-align: right;
+  margin-top: -15%;
+  float: right;
+}
+
+.aboutImg img {
+  border-radius: 50%;
+}
