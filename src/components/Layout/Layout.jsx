@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-import css from './Layout.module.css'
-
+import Container from '../Container'
 import Header from '../Header'
+import Footer from '../Footer'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, fluid }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -18,16 +18,26 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className={css.layout}>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {children}
-      </div>
+      <>
+        <Container>
+          <Header siteTitle={data.site.siteMetadata.title} />
+        </Container>
+        {fluid ? children : <Container>{children}</Container>}
+        <Container>
+          <Footer />
+        </Container>
+      </>
     )}
   />
 )
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  fluid: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  fluid: false,
 }
 
 export default Layout

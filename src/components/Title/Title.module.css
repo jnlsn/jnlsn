@@ -1,0 +1,30 @@
+@import '../../utils/defaults.css';
+
+.title {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.title h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  border-left: 1px solid var(--color-black);
+  border-right: 1px solid var(--color-black);
+  color: var(--color-black);
+  background: white;
+  position: relative;
+  margin: 0;
+  font-weight: 700;
+}
+
+.title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-black);
+}

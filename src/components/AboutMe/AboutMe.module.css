@@ -1,19 +1,16 @@
-.about h1 {
-  line-height: 1em;
-  margin: 0;
-  margin-bottom: -0.25em;
-  color: rgba(0, 0, 0, 0.075);
-  font-size: 8rem;
+.about {
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 2rem;
+  color: white;
+  align-items: center;
 }
 
 .aboutText {
-  padding: 3rem;
-  padding-right: 10rem;
-  color: white;
   background: #5b205e;
-  position: relative;
-  margin: 0 12%;
   border-radius: 0.25rem;
+  padding: 2rem;
 }
 
 .aboutText > *:last-child {
@@ -21,12 +18,26 @@
 }
 
 .aboutImg {
-  width: 25%;
-  text-align: right;
-  margin-top: -15%;
-  float: right;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #5b205e;
+  margin: 2rem;
+}
+
+.aboutImg::before {
+  content: '';
+  height: 1px;
+  width: 4.15rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  background: #5b205e;
 }
 
 .aboutImg img {
   border-radius: 50%;
+  border: 0.75rem solid white;
+  position: relative;
+  margin: 0;
 }

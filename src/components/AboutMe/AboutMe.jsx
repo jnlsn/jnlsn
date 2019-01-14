@@ -15,7 +15,7 @@ import css from './AboutMe.module.css'
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Image = () => (
+const AboutMe = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,8 +30,8 @@ const Image = () => (
     `}
     render={data => (
       <div className={css.about}>
-        <h1>ABOUT ME</h1>
         <div className={css.aboutText}>
+          <h2>About Me</h2>
           <p>
             Full stack web development professional with bountiful experience
             building hundreds of websites for businesses, law firms,
@@ -48,4 +48,4 @@ const Image = () => (
     )}
   />
 )
-export default Image
+export default AboutMe
