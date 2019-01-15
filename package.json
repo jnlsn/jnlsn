@@ -1,9 +1,24 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "jayarnielsen",
+  "description": "Jay Nielsen's Web Site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jay Nielsen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayarnielsen/jayarnielsen"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
   "dependencies": {
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
@@ -22,30 +37,13 @@
     "react-helmet": "^5.2.0",
     "react-icons": "3.3.0",
     "react-typography": "0.16.18",
-    "stylelint": "9.9.0",
-    "stylelint-config-prettier": "4.0.0",
-    "stylelint-prettier": "1.0.6",
     "typography": "0.16.18"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
-  },
   "devDependencies": {
-    "prettier": "^1.15.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "gh-pages": "2.0.1",
+    "prettier": "^1.15.2",
+    "stylelint": "9.9.0",
+    "stylelint-config-prettier": "4.0.0",
+    "stylelint-prettier": "1.0.6"
   }
 }
