@@ -1,7 +1,7 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["drishti"],
+  "words": ["drishti", "unoptimized"],
   "ignoreWords": ["eamodio", "dbaeumer", "esbenp", "tabler", "nextjs"],
   "flagWords": ["hte"],
   "allowCompoundWords": true,
