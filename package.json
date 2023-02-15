@@ -1,49 +1,31 @@
 {
-  "name": "jayarnielsen",
-  "description": "Jay Nielsen's Web Site",
+  "name": "jaynielsen",
   "version": "0.1.0",
-  "author": "Jay Nielsen",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jayarnielsen/jayarnielsen"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "deploy": "gatsby build && gh-pages -d public"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "gatsby": "^2.0.76",
-    "gatsby-image": "^2.0.20",
-    "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^2.0.16",
-    "gatsby-plugin-postcss": "2.0.2",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sharp": "^2.0.14",
-    "gatsby-plugin-typography": "2.2.5",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-sharp": "^2.1.8",
-    "postcss-preset-env": "6.5.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "react-icons": "3.3.0",
-    "react-typography": "0.16.18",
-    "typography": "0.16.18"
+    "@gaze-ui/react": "0.1.1",
+    "@gaze-ui/tokens": "0.1.0",
+    "@next/font": "13.1.6",
+    "@tabler/icons-react": "2.4.0",
+    "classnames": "2.3.2",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "gh-pages": "2.0.1",
-    "prettier": "^1.15.2",
-    "stylelint": "9.9.0",
-    "stylelint-config-prettier": "4.0.0",
-    "stylelint-prettier": "1.0.6"
+    "@gaze-ui/eslint-config": "0.1.0",
+    "@gaze-ui/tsconfig": "0.1.0",
+    "@types/node": "18.13.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.1.6",
+    "typescript": "4.9.5"
   }
 }

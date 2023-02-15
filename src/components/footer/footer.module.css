@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--size-space-50) calc(var(--size-space-100) - 1px);
+  padding-bottom: var(--size-space-100);
+  border-top: 1px solid var(--text-color);
+  position: relative;
+  align-items: center;
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 25%;
+  top: 0;
+  width: 1px;
+  background: var(--text-color);
+}
+
+.footer::before {
+  left: 0;
+}
+
+.footer::after {
+  right: 0;
+}

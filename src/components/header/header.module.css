@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--size-space-50) calc(var(--size-space-100) - 1px);
+  padding-top: var(--size-space-100);
+  border-bottom: 1px solid var(--text-color);
+  position: relative;
+  align-items: center;
+}
+
+.header::before,
+.header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 25%;
+  bottom: 0;
+  width: 1px;
+  background: var(--text-color);
+}
+
+.header::before {
+  left: 0;
+}
+
+.header::after {
+  right: 0;
+}
+
+.social {
+  font-size: clamp(var(--size-font-3xl), 4vw, var(--size-font-4xl));
+}
+
+.social a {
+  color: var(--text-color);
+  display: inline-flex;
+}
+
+.social a:focus {
+  outline-color: var(--color-cyan-500);
+  outline-offset: 0.05em;
+  --moz-outline-radius: var(--size-radius-base);
+}
