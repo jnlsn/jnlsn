@@ -36,7 +36,7 @@ export const Project = ({
     space="var(--size-space-100)"
   >
     <Frame aspectRatio={16 / 9} borderRadius="var(--size-radius-lg)">
-      <Image alt="title" src={image} />
+      <Image alt="title" placeholder="blur" src={image} />
     </Frame>
     <Box
       background={color}
