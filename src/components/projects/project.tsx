@@ -1,4 +1,12 @@
-import { Anchor, Box, Frame, Heading, Sidebar, Stack, Text } from "@gaze-ui/react";
+import {
+  Anchor,
+  Box,
+  Frame,
+  Heading,
+  Sidebar,
+  Stack,
+  Text,
+} from "@gaze-ui/react";
 import Image, { StaticImageData } from "next/image";
 import * as React from "react";
 
@@ -22,19 +30,19 @@ export const Project = ({
   cta,
 }: ProjectProps): JSX.Element => (
   <Sidebar
-    space="var(--size-space-100)"
-    side="left"
     reverse={reverse}
+    side="left"
     sideWidth="20rem"
+    space="var(--size-space-100)"
   >
     <Frame aspectRatio={16 / 9} borderRadius="var(--size-radius-lg)">
-      <Image src={image} alt="title" />
+      <Image alt="title" src={image} />
     </Frame>
     <Box
       background={color}
       borderRadius="var(--size-radius-lg)"
-      padding="var(--size-space-100)"
       invert
+      padding="var(--size-space-100)"
     >
       <Stack space="var(--size-space-25)">
         <Heading as="h3" variant="h5">

@@ -1,14 +1,14 @@
-import { Box, Center, Heading, Stack, Text } from "@gaze-ui/react";
+import { Box, Center, Text } from "@gaze-ui/react";
 import * as React from "react";
 
 export const AboutMe = (): JSX.Element => (
   <Center maxWidth="60rem">
     <Box
       as="article"
-      padding="var(--size-space-100)"
       background="var(--color-violet-900)"
       borderRadius="var(--size-radius-lg)"
       invert
+      padding="var(--size-space-100)"
     >
       <Text>
         Hello 👋🏻 my name is Jay! I'm a frontend software engineer with bountiful

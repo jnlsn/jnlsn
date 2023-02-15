@@ -10,7 +10,7 @@ export const Title = ({ children }: TitleProps): JSX.Element => {
   return (
     <Center maxWidth="60rem">
       <div className={styles.title}>
-        <Heading as="h2" variant="h3" className={styles.heading}>
+        <Heading as="h2" className={styles.heading} variant="h3">
           {children}
         </Heading>
       </div>

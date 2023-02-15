@@ -10,15 +10,10 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-/**
- *
- * @param root0
- * @param root0.Component
- * @param root0.pageProps
- */
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style global jsx>{`
         :root {
           --text-color: var(--color-slate-800);

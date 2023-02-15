@@ -1,4 +1,12 @@
-import { Box, Center, Grid, Heading, Icon, Sidebar, Stack } from "@gaze-ui/react";
+import {
+  Box,
+  Center,
+  Grid,
+  Heading,
+  Icon,
+  Sidebar,
+  Stack,
+} from "@gaze-ui/react";
 import {
   IconAccessible,
   IconBook,
@@ -10,8 +18,6 @@ import {
   IconChairDirector,
   IconInfinity,
   IconKeyframes,
-  IconMasksTheater,
-  IconMovie,
   IconTerminal,
   IconTestPipe,
 } from "@tabler/icons-react";
@@ -22,19 +28,19 @@ export const Skills = (): JSX.Element => (
   <Center maxWidth="60rem">
     <Sidebar side="right" sideWidth="20rem" space="var(--size-space-100)">
       <Box
-        padding="var(--size-space-100)"
         background="var(--color-cyan-800)"
         borderRadius="var(--size-radius-lg)"
         invert
+        padding="var(--size-space-100)"
       >
         <Stack space="var(--size-space-50)">
           <Heading as="h3" variant="h5">
             Engineering
           </Heading>
           <Grid
+            className={styles.skills}
             minimum="10rem"
             space="var(--size-space-25)"
-            className={styles.skills}
           >
             <Icon>
               <IconBrandTypescript />
@@ -76,19 +82,19 @@ export const Skills = (): JSX.Element => (
         </Stack>
       </Box>
       <Box
-        padding="var(--size-space-100)"
         background="var(--color-lime-800)"
         borderRadius="var(--size-radius-lg)"
         invert
+        padding="var(--size-space-100)"
       >
         <Stack space="var(--size-space-50)">
           <Heading as="h3" variant="h5">
             Multimedia
           </Heading>
           <Grid
+            className={styles.skills}
             minimum="10rem"
             space="var(--size-space-25)"
-            className={styles.skills}
           >
             <Icon>
               <IconBook />

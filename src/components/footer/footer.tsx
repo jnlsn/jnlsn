@@ -9,8 +9,8 @@ export const Footer = (): JSX.Element => (
         Built with{" "}
         <Anchor
           href="https://github.com/studio-drishti/gaze"
-          target="_blank"
           rel="nofollow"
+          target="_blank"
         >
           Gaze design system
         </Anchor>

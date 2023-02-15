@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Cluster, Center, Icon, Text, Heading } from "@gaze-ui/react";
+import { Box, Cluster, Center, Icon, Heading } from "@gaze-ui/react";
 import {
   IconBrandGithub,
   IconBrandInstagram,
@@ -16,16 +16,20 @@ export const Header = (): JSX.Element => (
       <Heading as="h1" variant="h5">
         JAY NIELSEN
       </Heading>
-      <Cluster space="var(--size-space-10)" className={cx("social")}>
-        <a href="https://github.com/jnlsn/" target="_blank" rel="nofollow">
+      <Cluster className={cx("social")} space="var(--size-space-10)">
+        <a
+          href="https://github.com/jnlsn/"
+          rel="nofollow noreferrer"
+          target="_blank"
+        >
           <Icon label="GitHub">
             <IconBrandGithub stroke="1.5" />
           </Icon>
         </a>
         <a
           href="https://linkedin.com/in/nielsen/"
+          rel="nofollow noreferrer"
           target="_blank"
-          rel="nofollow"
         >
           <Icon label="LinkedIn">
             <IconBrandLinkedin stroke="1.5" />
@@ -33,8 +37,8 @@ export const Header = (): JSX.Element => (
         </a>
         <a
           href="https://instagram.com/jayarnielsen/"
+          rel="nofollow noreferrer"
           target="_blank"
-          rel="nofollow"
         >
           <Icon label="Instagram">
             <IconBrandInstagram stroke="1.5" />
