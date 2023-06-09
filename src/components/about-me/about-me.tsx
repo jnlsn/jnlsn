@@ -12,11 +12,11 @@ export const AboutMe = (): JSX.Element => (
     >
       <Text>
         Hello 👋🏻 my name is Jay! I'm a frontend software engineer with bountiful
-        experience building hundreds of websites for businesses, law firms,
-        non-profits, and universities across the nation. I enjoy exploring
-        opportunities in technology for creatively sharing information, and have
-        worked with a variety of teams to deliver quality web applications for
-        clients large and small.
+        experience building web applications. After more than 15 years in
+        software development, I still love building sustainable systems that are
+        purpose-driven, simple to maintain, and easy to understand. I excel at
+        engineering web applications, automating manual processes, and
+        implementing straightforward procedures within development teams.
       </Text>
     </Box>
   </Center>
