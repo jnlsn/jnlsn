@@ -4,6 +4,8 @@ import {
   IconBrandGithub,
   IconBrandInstagram,
   IconBrandLinkedin,
+  IconBrandMastodon,
+  IconNotebook,
 } from "@tabler/icons-react";
 import classNames from "classnames/bind";
 import styles from "./header.module.css";
@@ -36,12 +38,17 @@ export const Header = (): JSX.Element => (
           </Icon>
         </a>
         <a
-          href="https://instagram.com/jayarnielsen/"
+          href="https://mastodon.social/@nlsn"
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon label="Instagram">
-            <IconBrandInstagram stroke="1.5" />
+          <Icon label="Mastodon">
+            <IconBrandMastodon stroke="1.5" />
+          </Icon>
+        </a>
+        <a href="https://nlsn.xyz" rel="nofollow noreferrer" target="_blank">
+          <Icon label="Blog">
+            <IconNotebook stroke="1.5" />
           </Icon>
         </a>
       </Cluster>

@@ -1,7 +1,7 @@
 /// <reference types="styled-jsx/global" />
 import * as React from "react";
 import type { AppProps } from "next/app";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import "@gaze-ui/tokens/css/variables.css";
 import "@gaze-ui/react/styles/base.css";
 
