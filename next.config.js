@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["@gaze-ui/react"],
+  output: "export",
   images: {
     unoptimized: true,
   },
