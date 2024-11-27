@@ -11,24 +11,24 @@ import Image, { StaticImageData } from "next/image";
 import * as React from "react";
 
 export interface ProjectProps {
-  title: string;
+  color: string;
+  cta: string;
   description: string;
   image: StaticImageData;
-  reverse?: boolean;
-  color: string;
   link: string;
-  cta: string;
+  reverse?: boolean;
+  title: string;
 }
 
 export const Project = ({
-  title,
+  color,
+  cta,
   description,
   image,
-  reverse,
-  color,
   link,
-  cta,
-}: ProjectProps): JSX.Element => (
+  reverse,
+  title,
+}: ProjectProps) => (
   <Sidebar
     reverse={reverse}
     side="left"

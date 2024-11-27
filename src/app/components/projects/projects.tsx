@@ -1,10 +1,11 @@
-import { Center, Stack } from "@gaze-ui/react";
+import { Stack } from "@gaze-ui/react";
 import * as React from "react";
+
 import helloWorldPic from "../../../assets/hello-world.jpg";
 import rubbishRabblePic from "../../../assets/rubbish-rabble.jpg";
 import { Project } from "./project";
 
-export const Projects = (): JSX.Element => (
+export const Projects = () => (
   <Stack space="var(--gaze-space-100)">
     <Project
       color="var(--gaze-color-red-900)"

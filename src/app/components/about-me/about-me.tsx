@@ -1,7 +1,7 @@
-import { Box, Center, Text } from "@gaze-ui/react";
+import { Box, Text } from "@gaze-ui/react";
 import * as React from "react";
 
-export const AboutMe = (): JSX.Element => (
+export const AboutMe = () => (
   <Box
     as="article"
     background="var(--gaze-color-violet-900)"

@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Box, Cluster, Center, Icon, Heading, Anchor } from "@gaze-ui/react";
+import { Anchor, Cluster, Heading, Icon } from "@gaze-ui/react";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
@@ -7,23 +6,25 @@ import {
   IconNotebook,
 } from "@tabler/icons-react";
 import classNames from "classnames/bind";
+import * as React from "react";
+
 import styles from "./header.module.css";
 
 const cx = classNames.bind(styles);
 
-export const Header = (): JSX.Element => (
+export const Header = () => (
   <header className={cx("header")}>
-    <Cluster justify="space-between" align="center">
+    <Cluster align="center" justify="space-between">
       <Heading as="h1" variant="h4">
         JAY NIELSEN
       </Heading>
-      <Cluster space="var(--gaze-space-20)" align="center">
+      <Cluster align="center" space="var(--gaze-space-20)">
         <Anchor
           href="https://github.com/jnlsn/"
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon size="var(--gaze-font-size-3xl)" label="GitHub">
+          <Icon label="GitHub" size="var(--gaze-font-size-3xl)">
             <IconBrandGithub stroke="1.5" />
           </Icon>
         </Anchor>
@@ -32,7 +33,7 @@ export const Header = (): JSX.Element => (
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon size="var(--gaze-font-size-3xl)" label="LinkedIn">
+          <Icon label="LinkedIn" size="var(--gaze-font-size-3xl)">
             <IconBrandLinkedin stroke="1.5" />
           </Icon>
         </Anchor>
@@ -41,7 +42,7 @@ export const Header = (): JSX.Element => (
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon size="var(--gaze-font-size-3xl)" label="Mastodon">
+          <Icon label="Mastodon" size="var(--gaze-font-size-3xl)">
             <IconBrandMastodon stroke="1.5" />
           </Icon>
         </Anchor>
@@ -50,7 +51,7 @@ export const Header = (): JSX.Element => (
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon size="var(--gaze-font-size-3xl)" label="Blog">
+          <Icon label="Blog" size="var(--gaze-font-size-3xl)">
             <IconNotebook stroke="1.5" />
           </Icon>
         </Anchor>

@@ -1,11 +1,12 @@
-import * as React from "react";
 import { Center, Stack } from "@gaze-ui/react";
 import { Metadata } from "next";
-import { Skills } from "./components/skills";
-import { Footer } from "./components/footer";
-import { Projects } from "./components/projects";
-import { Header } from "./components/header";
+import * as React from "react";
+
 import { AboutMe } from "./components/about-me/about-me";
+import { Footer } from "./components/footer";
+import { Header } from "./components/header";
+import { Projects } from "./components/projects";
+import { Skills } from "./components/skills";
 import { Title } from "./components/title";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <Center maxWidth="60rem" gutter={"var(--gaze-space-50)"}>
+    <Center gutter={"var(--gaze-space-50)"} maxWidth="60rem">
       <Stack space="var(--gaze-space-100)">
         <Header />
         <AboutMe />

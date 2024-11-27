@@ -1,12 +1,4 @@
-import {
-  Box,
-  Center,
-  Grid,
-  Heading,
-  Icon,
-  Sidebar,
-  Stack,
-} from "@gaze-ui/react";
+import { Box, Grid, Heading, Icon, Sidebar, Stack } from "@gaze-ui/react";
 import {
   IconAccessible,
   IconBook,
@@ -22,9 +14,10 @@ import {
   IconTestPipe,
 } from "@tabler/icons-react";
 import * as React from "react";
+
 import styles from "./skills.module.css";
 
-export const Skills = (): JSX.Element => (
+export const Skills = () => (
   <Sidebar side="right" sideWidth="20rem" space="var(--gaze-space-100)">
     <Box
       background="var(--gaze-color-cyan-800)"
