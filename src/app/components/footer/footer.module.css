@@ -1,0 +1,25 @@
+.footer {
+  position: relative;
+  padding: var(--gaze-space-50) calc(var(--gaze-space-100) - 1px);
+  padding-bottom: var(--gaze-space-100);
+  border-top: 1px solid var(--gaze-color-text-default);
+}
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 1px;
+  height: 25%;
+  background: var(--gaze-color-text-default);
+  content: "";
+}
+
+.footer::before {
+  left: 0;
+}
+
+.footer::after {
+  right: 0;
+}

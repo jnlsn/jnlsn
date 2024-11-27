@@ -33,18 +33,18 @@ export const Project = ({
     reverse={reverse}
     side="left"
     sideWidth="20rem"
-    space="var(--size-space-100)"
+    space="var(--gaze-space-100)"
   >
-    <Frame aspectRatio={16 / 9} borderRadius="var(--size-radius-lg)">
+    <Frame aspectRatio={16 / 9} borderRadius="var(--gaze-radius-lg)">
       <Image alt="title" placeholder="blur" src={image} />
     </Frame>
     <Box
       background={color}
-      borderRadius="var(--size-radius-lg)"
-      invert
-      padding="var(--size-space-100)"
+      borderRadius="var(--gaze-radius-lg)"
+      data-invert="true"
+      padding="var(--gaze-space-100)"
     >
-      <Stack space="var(--size-space-25)">
+      <Stack space="var(--gaze-space-25)">
         <Heading as="h3" variant="h5">
           {title}
         </Heading>

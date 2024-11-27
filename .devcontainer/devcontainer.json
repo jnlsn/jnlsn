@@ -19,13 +19,18 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "EditorConfig.EditorConfig",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "stylelint.vscode-stylelint"
       ],
       "settings": {
+        "typescript.tsdk": "node_modules/typescript/lib",
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "npm.packageManager": "npm",
+        "eslint.useFlatConfig": true,
         "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": "explicit"
+          "source.fixAll.eslint": "explicit",
+          "source.fixAll.stylelint": "explicit"
         }
       }
     }

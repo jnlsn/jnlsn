@@ -6,40 +6,41 @@
 .title::before,
 .heading::after,
 .heading::before {
-  content: "";
-  display: block;
   position: absolute;
-  background: var(--text-color);
+  display: block;
+  background: var(--gaze-color-text-default);
+  content: "";
 }
 
 .title::before {
-  height: 1px;
   top: 50%;
-  left: 0;
   right: 0;
+  left: 0;
+  height: 1px;
 }
 
 .title::after {
   top: 25%;
-  bottom: 25%;
   right: 0;
+  bottom: 25%;
   width: 1px;
 }
 
 .heading {
-  background: var(--color-white);
   position: relative;
   display: inline-flex;
-  padding: 0 calc(var(--size-space-100) - 1px);
-  border-width: 0 1px;
+  flex-wrap: nowrap;
+  padding: 0 calc(var(--gaze-space-100) - 1px);
   text-transform: uppercase;
+  background: var(--gaze-color-white);
+  border-width: 0 1px;
 }
 
 .heading::before,
 .heading::after {
-  width: 1px;
   top: 25%;
   bottom: 25%;
+  width: 1px;
 }
 
 .heading::before {

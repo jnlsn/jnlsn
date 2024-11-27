@@ -1,10 +1,15 @@
 {
-  "extends": "@gaze-ui/tsconfig/nextjs.json",
-  "include": ["src", "next-env.d.ts", "css-properties.d.ts"],
+  "extends": "@gaze-ui/tsconfig/react-app.json",
+  "include": [
+    "next-env.d.ts",
+    "src",
+    ".next/types/**/*.ts"
+  ],
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }

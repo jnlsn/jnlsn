@@ -1,0 +1,30 @@
+.header {
+  position: relative;
+  padding: var(--gaze-space-50) calc(var(--gaze-space-100) - 1px);
+  padding-top: var(--gaze-space-100);
+  border-bottom: 1px solid var(--gaze-color-text-default);
+}
+
+.header::before,
+.header::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 1px;
+  height: 25%;
+  background: var(--gaze-color-text-default);
+  content: "";
+}
+
+.header::before {
+  left: 0;
+}
+
+.header::after {
+  right: 0;
+}
+
+.header a {
+  display: inline-flex;
+  flex-wrap: nowrap;
+}

@@ -1,10 +1,10 @@
-import { Anchor, Box, Center, Text } from "@gaze-ui/react";
+import { Anchor, Box, Center, Cluster, Text } from "@gaze-ui/react";
 import * as React from "react";
 import styles from "./footer.module.css";
 
 export const Footer = (): JSX.Element => (
-  <Center maxWidth="60rem">
-    <Box as="footer" className={styles.footer}>
+  <Box as="footer" className={styles.footer}>
+    <Cluster justify="space-between" align="center">
       <Text fontSize="var(--size-font-sm)">
         Built with{" "}
         <Anchor
@@ -19,6 +19,6 @@ export const Footer = (): JSX.Element => (
       <Text fontSize="var(--size-font-sm)">
         &copy; {new Date().getFullYear()}
       </Text>
-    </Box>
-  </Center>
+    </Cluster>
+  </Box>
 );

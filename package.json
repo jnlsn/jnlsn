@@ -9,22 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@gaze-ui/react": "0.1.1",
-    "@gaze-ui/tokens": "0.1.0",
-    "@tabler/icons-react": "3.2.0",
+    "@gaze-ui/react": "1.0.1",
+    "@gaze-ui/tokens": "1.0.0",
+    "@tabler/icons-react": "3.22.0",
     "classnames": "2.5.1",
-    "next": "14.2.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "15.0.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@gaze-ui/eslint-config": "0.1.0",
-    "@gaze-ui/tsconfig": "0.1.0",
-    "@types/node": "20.12.7",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
-    "eslint": "8.34.0",
-    "eslint-config-next": "14.2.2",
-    "typescript": "5.4.5"
+    "@gaze-ui/eslint-config": "1.0.0",
+    "@gaze-ui/stylelint-config": "^0.1.0",
+    "@gaze-ui/tsconfig": "0.2.1",
+    "@types/node": "22.10.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "eslint": "9.15.0",
+    "eslint-config-next": "15.0.3",
+    "typescript": "5.7.2"
   }
 }

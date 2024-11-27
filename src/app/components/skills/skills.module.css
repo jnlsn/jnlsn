@@ -1,4 +1,5 @@
 .skills {
-  --icon-space: var(--size-space-15);
+  --icon-space: var(--gaze-space-15);
+
   font-size: var(--size-font-base);
 }

@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Box, Cluster, Center, Icon, Heading } from "@gaze-ui/react";
+import { Box, Cluster, Center, Icon, Heading, Anchor } from "@gaze-ui/react";
 import {
   IconBrandGithub,
-  IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandMastodon,
   IconNotebook,
@@ -13,45 +12,49 @@ import styles from "./header.module.css";
 const cx = classNames.bind(styles);
 
 export const Header = (): JSX.Element => (
-  <Center maxWidth="60rem">
-    <Box as="header" className={cx("header")}>
-      <Heading as="h1" variant="h5">
+  <header className={cx("header")}>
+    <Cluster justify="space-between" align="center">
+      <Heading as="h1" variant="h4">
         JAY NIELSEN
       </Heading>
-      <Cluster className={cx("social")} space="var(--size-space-10)">
-        <a
+      <Cluster space="var(--gaze-space-20)" align="center">
+        <Anchor
           href="https://github.com/jnlsn/"
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon label="GitHub">
+          <Icon size="var(--gaze-font-size-3xl)" label="GitHub">
             <IconBrandGithub stroke="1.5" />
           </Icon>
-        </a>
-        <a
+        </Anchor>
+        <Anchor
           href="https://linkedin.com/in/nielsen/"
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon label="LinkedIn">
+          <Icon size="var(--gaze-font-size-3xl)" label="LinkedIn">
             <IconBrandLinkedin stroke="1.5" />
           </Icon>
-        </a>
-        <a
+        </Anchor>
+        <Anchor
           href="https://mastodon.social/@nlsn"
           rel="nofollow noreferrer"
           target="_blank"
         >
-          <Icon label="Mastodon">
+          <Icon size="var(--gaze-font-size-3xl)" label="Mastodon">
             <IconBrandMastodon stroke="1.5" />
           </Icon>
-        </a>
-        <a href="https://nlsn.xyz" rel="nofollow noreferrer" target="_blank">
-          <Icon label="Blog">
+        </Anchor>
+        <Anchor
+          href="https://nlsn.xyz"
+          rel="nofollow noreferrer"
+          target="_blank"
+        >
+          <Icon size="var(--gaze-font-size-3xl)" label="Blog">
             <IconNotebook stroke="1.5" />
           </Icon>
-        </a>
+        </Anchor>
       </Cluster>
-    </Box>
-  </Center>
+    </Cluster>
+  </header>
 );
