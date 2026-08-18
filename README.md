@@ -5,8 +5,6 @@ Senior Software Engineer | Front-End Development Expert | Accessibility Champion
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-nielsen-0a66c2?style=for-the-badge)](https://linkedin.com/in/nielsen/)
 [![YouTube](https://img.shields.io/badge/YouTube-Hello_World-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Thehelloworldprogram)
 
----
-
 ## 👋 About
 
 Self-directed senior software engineer dedicated to crafting intuitive, accessible, and
@@ -16,8 +14,6 @@ Collaborative mentor known for training teams to elevate code quality, improve p
 and adopt automation. Accessibility advocate passionate about bridging the gap between
 design and engineering to deliver thoughtful, memorable experiences that engage users in
 new ways.
-
----
 
 ## 🛠 Toolkit
 
@@ -30,22 +26,16 @@ new ways.
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-2088ff?style=flat-square&logo=githubactions&logoColor=white)
 ![Technical Writing](https://img.shields.io/badge/Technical_Writing-4b5563?style=flat-square&logo=markdown&logoColor=white)
 
----
-
 ## 🎓 Credentials
 
 ![Meta Front-End Developer](https://img.shields.io/badge/Meta-Front--End_Developer-0081fb?style=flat-square&logo=meta&logoColor=white)
 ![Green Software Practitioner](https://img.shields.io/badge/Green_Software-Practitioner-3f6212?style=flat-square&logo=leaflet&logoColor=white)
 ![Utah Valley University](https://img.shields.io/badge/Utah_Valley_University-006400?style=flat-square&logo=googlescholar&logoColor=white)
 
----
-
 ## 📚 Publications
 
 - **[The Hello World Program: Hands-On Computer Science](https://dototot.gumroad.com/l/hello-world)** — computer science from binary to robots.
 - **[TIL HTML J4F: Build Your First Website!](https://dototot.gumroad.com/l/tilhtmlj4f)** — a beginner's path into building for the web.
-
----
 
 ## 📺 Web Series
 
