@@ -11,7 +11,8 @@ new ways.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-nielsen-0a66c2?style=for-the-badge)](https://linkedin.com/in/nielsen/)
 [![YouTube](https://img.shields.io/badge/YouTube-Hello_World-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Thehelloworldprogram)
 
-## 🛠 Toolkit
+**🛠 Toolkit**
+---
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-61dafb?style=flat-square&logo=react&logoColor=black)
