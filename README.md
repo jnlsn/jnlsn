@@ -1,12 +1,5 @@
 # Jay Nielsen - @jnlsn
 
-Senior Software Engineer | Front-End Development Expert | Accessibility Champion | Collaborator and Mentor
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-nielsen-0a66c2?style=for-the-badge)](https://linkedin.com/in/nielsen/)
-[![YouTube](https://img.shields.io/badge/YouTube-Hello_World-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Thehelloworldprogram)
-
-## 👋 About
-
 Self-directed senior software engineer dedicated to crafting intuitive, accessible, and
 user-centered experiences. Creative professional whose early career interest in filmmaking
 brings a unique perspective to human-computer interaction and application design.
@@ -14,6 +7,9 @@ Collaborative mentor known for training teams to elevate code quality, improve p
 and adopt automation. Accessibility advocate passionate about bridging the gap between
 design and engineering to deliver thoughtful, memorable experiences that engage users in
 new ways.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-nielsen-0a66c2?style=for-the-badge)](https://linkedin.com/in/nielsen/)
+[![YouTube](https://img.shields.io/badge/YouTube-Hello_World-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Thehelloworldprogram)
 
 ## 🛠 Toolkit
 
