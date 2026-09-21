@@ -35,6 +35,6 @@ new ways.
 
 ## 📺 Web Series
 
-| [The Hello World Program](https://www.youtube.com/playlist?list=PL5BlhFw3Ogbot2DM4cX86In52frnH1tjL) | [Superusers: The Legendary GNU/Linux Show](https://www.youtube.com/playlist?list=PL5BlhFw3OgbpUYL4zP4zM8Na5Q2TwQA_X) | [Daisy's Web Development Diary](https://www.youtube.com/playlist?list=PL5BlhFw3OgbpPqCs6DLiTdExlOQT43X1n) |
+| [The Hello World Program](https://www.youtube.com/playlist?list=PL5BlhFw3Ogbot2DM4cX86In52frnH1tjL) | [The Legendary GNU/Linux Show](https://www.youtube.com/playlist?list=PL5BlhFw3OgbpUYL4zP4zM8Na5Q2TwQA_X) | [Daisy's Web Development Diary](https://www.youtube.com/playlist?list=PL5BlhFw3OgbpPqCs6DLiTdExlOQT43X1n) |
 | :--: | :--: | :--: |
 | [![The Hello World Program](https://img.youtube.com/vi/bJKltx0MFmI/mqdefault.jpg)](https://www.youtube.com/playlist?list=PL5BlhFw3Ogbot2DM4cX86In52frnH1tjL)<br><sub>Hands-on computer science.</sub> | [![Superusers: The Legendary GNU/Linux Show](https://img.youtube.com/vi/sDfn74sNOGE/mqdefault.jpg)](https://www.youtube.com/playlist?list=PL5BlhFw3OgbpUYL4zP4zM8Na5Q2TwQA_X)<br><sub>A love letter to the command line.</sub> | [![Daisy's Web Development Diary](https://img.youtube.com/vi/NbIeVLD2sBA/mqdefault.jpg)](https://www.youtube.com/playlist?list=PL5BlhFw3OgbpPqCs6DLiTdExlOQT43X1n)<br><sub>Web development diary.</sub> |
